@@ -67,7 +67,7 @@ if username:
 
             deepseek_response = requests.post("https://openrouter.ai/api/v1/chat/completions", headers = headers_openai, json = {
                 "model": "deepseek/deepseek-chat-v3-0324:free",
-                "messages": messages}).json()["choices"][0]["message"]["content"]
+                "messages": messages}).json()#["choices"][0]["message"]["content"]
 
             requests.post(f"{supabase_url}/rest/v1/chat_history", headers = headers_supabase, json = {
                 "username": "Deepseek",
@@ -105,7 +105,7 @@ if username:
 
             qwen_response = requests.post("https://openrouter.ai/api/v1/chat/completions", headers = headers_openai, json = {
                 "model": "qwen/qwen3-14b:free",
-                "messages": messages}).json()["choices"][0]["message"]["content"]
+                "messages": messages}).json()#["choices"][0]["message"]["content"]
 
             requests.post(f"{supabase_url}/rest/v1/chat_history", headers = headers_supabase, json = {
                 "username": "Qwen",
