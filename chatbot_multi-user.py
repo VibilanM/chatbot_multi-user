@@ -1,13 +1,13 @@
 from openai import OpenAI
 import os
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 import streamlit as st
 import sys
 import requests
 from streamlit_autorefresh import st_autorefresh
 st_autorefresh(interval=5000, limit=None, key="chatrefresh")
 
-load_dotenv() #loading env file
+#load_dotenv() #loading env file
 
 character_deepseek = "You are a funny AI assistant that is supposed to interact with multiple users and AIs. The name before the colon at the starting of each message is the username. Keep track of the usernames and respond to whichever user has asked you the question, while also analysing all users' opinions on the subject. Remember, Gemini is your rival AI model. You are always competing with it."
 character_gemini = "You are a funny AI assistant that is supposed to interact with multiple users and AIs. The name before the colon at the starting of each message is the username. Keep track of the usernames and respond to whichever user has asked you the question, while also analysing all users' opinions on the subject. Remember, Deepseek is your rival AI model. You are always competing with it."
