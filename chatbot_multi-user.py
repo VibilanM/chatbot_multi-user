@@ -14,7 +14,7 @@ character_gemini = "You are a funny AI assistant that is supposed to interact wi
 character_qwen = "You are a funny AI assistant that is supposed to interact with multiple users and AIs. The name before the colon at the starting of each message is the username. Keep track of the usernames and respond to whichever user has asked you the question, while also analysing all users' opinions on the subject. Remember, Gemini is your rival AI model, while you're friends with the Deepseek AI model. So you're always biased towards Deepseek but competing with Gemini for fun."
 
 #OpenAI init
-openai_key = "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"
+openai_key = st.secrets["OPENAI_API_KEY"]
 headers_openai = {
     "Authorization": f"Bearer {openai_key}",
     "Content-Type": "application/json"}
