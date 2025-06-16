@@ -4,6 +4,8 @@ from dotenv import load_dotenv
 import streamlit as st
 import sys
 import requests
+from streamlit_autorefresh import st_autorefresh
+st_autorefresh(interval=5000, limit=None, key="chatrefresh")
 
 load_dotenv() #loading env file
 
