@@ -86,7 +86,7 @@ if username:
 
             gemini_response = requests.post("https://openrouter.ai/api/v1/chat/completions", headers = headers_openai, json = {
                 "model": "google/gemini-2.0-flash-exp:free",
-                "messages": messages}).json()#["choices"][0]["message"]["content"]
+                "messages": messages}).json()["choices"][0]["message"]["content"]
 
             requests.post(f"{supabase_url}/rest/v1/chat_history", headers = headers_supabase, json = {
                 "username": "Gemini",
