@@ -20,8 +20,8 @@ headers_openai = {
     "Content-Type": "application/json"}
 
 #Supabase init
-supabase_url = "https://lnvhxrbompjbmfdekbha.supabase.co"
-supabase_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxudmh4cmJvbXBqYm1mZGVrYmhhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDkzNzI4MTksImV4cCI6MjA2NDk0ODgxOX0.AHxed6baGIfcK3JWaOH0Aa2-bPULn_LseuVQ_fS2hMs"
+supabase_url = st.secrets["SUPABASE_URL"]
+supabase_key = st.secrets["SUPABASE_KEY"]
 
 headers_supabase = {
     "apikey": supabase_key,
@@ -115,3 +115,4 @@ if username:
             with st.chat_message("assistant"):
                 load_ai = f"Qwen: {qwen_response}"
                 st.markdown(load_ai)
+
